@@ -10,7 +10,6 @@ function addClassToVisibleElements() {
     var fadeElements = document.querySelectorAll(".fade");
     fadeElements.forEach(function (fadeElement) {
         if (!isElementInViewport(fadeElement)) fadeElement.classList.add("shows");
-        else fadeElement.classList.remove("shows");
     });
 }
 
