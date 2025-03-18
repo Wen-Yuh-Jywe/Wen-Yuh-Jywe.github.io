@@ -323,6 +323,10 @@ h6 {
         padding: 0px;
     }
 
+    .no_animation {
+        margin: 150px auto;
+    }
+
     .watsoncard_img {
         width: 150px;
         height: 150px;
