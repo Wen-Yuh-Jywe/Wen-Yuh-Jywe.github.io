@@ -5,7 +5,7 @@ html {
     background-color: var(--watson_white);
     scroll-behavior: smooth;
     --watson_gradient: linear-gradient(to bottom, #1d3557, #353cab, #7968c7);
-    --watson_light_blue: #4682b4;
+    --watson_light_blue: #00569c;
     --watson_blue: #1d3557;
     --watson_black: #222;
     --watson_gray: #555;
@@ -781,6 +781,11 @@ span[info]:hover::after {
 
 .footer_grid_6 {
     grid-column: span 6;
+}
+
+.copyright {
+    color: var(--watson_gray);
+    font-size: .8em;
 }
 
 .mob_span {
