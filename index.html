@@ -27,11 +27,16 @@
     <meta name="twitter:description" content="覺文郁教授官方網站，國立臺灣大學機械系終身特聘教授，現任 Intense Program 新型專班計畫主持人。">
     <meta name="twitter:image" content="https://wen-yuh-jywe.github.io/pic/thumbnail.jpg">
     <title>覺文郁 國立臺灣大學 (Wen-Yuh Jywe, National Taiwan University)</title>
-    <link
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;600&family=Noto+Sans+TC:wght@300;600&display=swap" />
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;600&family=Noto+Sans+TC:wght@300;600&display=swap"
-        rel="stylesheet">
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;600&family=Noto+Sans+TC:wght@300;600&display=swap" />
+    </noscript>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJZ2K72PMZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -39,10 +44,8 @@
         gtag('js', new Date());
         gtag('config', 'G-VJZ2K72PMZ');
     </script>
-    <script src="script/jquery-3.7.0.js"></script>
-    <script src="script/jquery.counterup.min.js"></script>
-    <script src="script/quicklink.umd.js"></script>
-    <script src="script/W_DEV_function_1.js"></script>
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script defer src="script/W_DEV_function_1.js"></script>
 </head>
 
 <body>
@@ -185,26 +188,32 @@
 </body>
 
 <script>
-    $(document).ready(function () {
-        gotop();
-    });
-    $(window).scroll(function () {
-        gotop();
-    });
-    $('.toTop').click(function () {
-        $('html, body, .wrap').animate({ scrollTop: '0px' }, 200);
-        $(".focusable").focus();
-    });
-    function gotop() {
-        var winH = $(window).height();
-        var scroll = $(window).scrollTop();
-        if (scroll > 100) {
-            $('.toTop').show();
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof jQuery !== 'undefined') {
+            $(document).ready(function () {
+                gotop();
+            });
+
+            $(window).scroll(function () {
+                gotop();
+            });
+
+            $('.toTop').click(function () {
+                $('html, body, .wrap').animate({ scrollTop: '0px' }, 200);
+                $(".focusable").focus();
+            });
         }
-        else {
-            $('.toTop').hide();
+
+        function gotop() {
+            var winH = $(window).height();
+            var scroll = $(window).scrollTop();
+            if (scroll > 100) {
+                $('.toTop').show();
+            } else {
+                $('.toTop').hide();
+            }
         }
-    }
+    });
 </script>
 
 <script type="application/ld+json">

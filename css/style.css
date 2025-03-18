@@ -170,6 +170,7 @@ h6 {
     padding: 0px;
     border-radius: 0;
     outline: 0px solid #a4adbc;
+    background: var(--watson_black);
 }
 
 .introhero video,
