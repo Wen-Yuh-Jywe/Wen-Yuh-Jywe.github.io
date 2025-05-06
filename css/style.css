@@ -245,12 +245,12 @@ h6 {
 }
 
 .watsoncard {
-    width: 70vw;
+    width: 75vw;
     margin: 20vh auto;
     padding: 0px;
     display: flex;
     align-items: start;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .watsoncard_img {
