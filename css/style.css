@@ -56,6 +56,16 @@ h1 {
     color: var(--watson_blue);
 }
 
+h1.topic_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1.topic_section span.title-text {
+    flex: 1;
+}
+
 h2 {
     font-size: 1.6em;
 }
@@ -878,6 +888,11 @@ span[info]:hover::after {
     padding-bottom: 0;
 }
 
+.recent-content .timeline-item:last-child .timeline-item-content {
+    border-left: 1px dashed var(--watson_gray);
+    padding-bottom: 0;
+}
+
 .timeline-title {
     font-size: 1.2em;
     color: var(--watson_gray);
@@ -949,4 +964,46 @@ span[info]:hover::after {
 
 .toTop span {
     color: rgba(0, 0, 0, 0);
+}
+
+.collapse-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-size: 2.2em;
+    margin: -.5em 0 0 4.5px;
+    color: var(--watson_blue);
+    user-select: none;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.collapse-toggle.active {
+    color: var(--watson_blue);
+    transform: rotate(180deg);
+    font-size: 1em;
+}
+
+.collapsible-content {
+    max-height: 15vh;
+    filter: blur(5px);
+    opacity: .2;
+    overflow: hidden;
+    transition: 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.collapsible-content.active {
+    max-height: 9999px;
+    filter: blur(0px);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.history-header {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }

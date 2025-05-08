@@ -145,3 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.collapse-toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            this.classList.toggle('active');
+            this.textContent = this.textContent === '+' ? '▲' : '+';
+            const content = this.closest('.history-header').nextElementSibling;
+            content.classList.toggle('active');
+        });
+    });
+});
