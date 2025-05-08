@@ -4,7 +4,7 @@ html {
     color: #000;
     background-color: var(--watson_white);
     scroll-behavior: smooth;
-    --watson_gradient: linear-gradient(to bottom, #1d3557, #353cab, #7968c7);
+    --watson_gradient: linear-gradient(175deg, #1d3557, #353cab, #7968c7);
     --watson_light_blue: #00569c;
     --watson_blue: #1d3557;
     --watson_black: #222;
@@ -246,7 +246,7 @@ h6 {
 
 .watsoncard {
     width: 75vw;
-    margin: 20vh auto;
+    margin: 10vh auto;
     padding: 0px;
     display: flex;
     align-items: start;
